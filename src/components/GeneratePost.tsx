@@ -78,7 +78,7 @@ export default function GeneratePost() {
     return (
         <div className=" h-screen ">
             <Helmet>
-                <title>My Page Title</title>
+                <title>Post Page | Medial</title>
                 <meta name="description" content="Post Page" />
                 <meta property="og:image" content={postData[0]?.ogImage} />
             </Helmet>
