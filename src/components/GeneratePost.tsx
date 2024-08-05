@@ -35,11 +35,17 @@ export default function GeneratePost() {
     };
     const handleSubmit = async () => {
         const formData = new FormData();
+
+        if(!title || !content) {
+            alert('Title and Content are required')
+        }
+
         formData.append("title", title);
         formData.append("content", content);
         if (file) {
             formData.append("image", file);
         }
+
         try {
             setLoading(true);
             const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/generate-og-image`, {
