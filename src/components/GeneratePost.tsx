@@ -38,6 +38,7 @@ export default function GeneratePost() {
 
         if(!title || !content) {
             alert('Title and Content are required')
+            return;
         }
 
         formData.append("title", title);
